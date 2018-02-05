@@ -1,17 +1,17 @@
 import re
 from setuptools import setup, find_packages
 
-with open('macss_tallies/__init__.py') as f:
+with open('vote_networks/__init__.py') as f:
     versionString = re.search(r"__version__ = '(.+)'", f.read()).group(1)
 
-setup(name='macss_tallies',
+setup(name='vote_networks',
     version = versionString,
     author="Reid McIlroy-Young",
     author_email = "reidmcy@uchicago.edu",
     license = 'GPL',
-    url="https://github.com/reidmcy/MACSS-Workshop-Tallies",
-    download_url = "https://github.com/reidmcy/MACSS-Workshop-Tallies/archive/{}.tar.gz".format(versionString),
-    keywords= 'MACSS',
+    url="https://github.com/reidmcy/vote_networks",
+    download_url = "https://github.com/reidmcy/vote_networks/archive/{}.tar.gz".format(versionString),
+    keywords= '',
     classifiers = [
     'Development Status :: 3 - Alpha',
     'Environment :: Console',
@@ -27,6 +27,6 @@ setup(name='macss_tallies',
     install_requires= ['datetime', 'requests'],
     packages = find_packages(),
     entry_points={'console_scripts': [
-              'macss_tallies = macss_tallies.main:main',
+              'vote_networks = vote_networks.main:main',
     ]},
 )
